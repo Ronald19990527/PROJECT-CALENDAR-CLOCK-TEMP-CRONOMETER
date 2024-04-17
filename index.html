@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar | Clock | Temp | Cronometer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://db.onlinewebfonts.com/c/84cb021d5f9af287ffff84b61beef6dc?family=clockicons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header"></header>
+    <main class="main">
+        <header class="header">
+            <div class="items-header">
+                <div class="item-head">Utilities</div>
+                <div class="item-head">Dark-Light-Them</div>
+                <div class="item-head">Settings</div>
+            </div>
+        </header>
+        <aside id="nav-menu-aside" class="nav-menu-aside">
+            <nav class="menu">
+                <h1>My App</h1>
+                <ul>
+                    <li id="utilitie-1" class="active">
+                        <i class="bi bi-clock-history icon"></i>
+                        <small>Timer</small>
+                    </li>
+                    <li id="utilitie-2">
+                        <i class="bi bi-stopwatch icon"></i>
+                        <small>Chronometer</small>
+                    </li>
+                    <li id="utilitie-3">
+                        <i class="bi bi-clock icon"></i>
+                        <small>Clock</small>
+                    </li>
+                    <li id="utilitie-4">
+                        <i class="bi bi-calendar-date icon"></i>
+                        <small>Calendar</small>
+                    </li>
+                </ul>
+            </nav>
+            <div id="show-and-close-menu" class="show-and-close-menu">
+                <i id="chevron-double-right-left" class="bi bi-chevron-double-right"></i>
+            </div>
+        </aside>
+    </main>
+    <script type="module" src="app.js"></script>
+</body>
+</html>
