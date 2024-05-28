@@ -28,18 +28,19 @@ export function localStorageAvailable(type) {
     }
 }
 
+// General Functions
+function getRegister(register) {
+    return JSON.parse(localStorage.getItem(register));
+}
+
 // MenuAside
 export function setRegisterAsideMenuUtilitie(setClassActive) {
     localStorage.setItem("setClassActive", JSON.stringify(setClassActive));
 }
 
-export function getRegisterAsideMenuUtilitie() {
-    return JSON.parse(localStorage.getItem("setClassActive"));
-}
-
 export function asideMenuLocalStorage() {
     if (localStorage.length > 0) {
-        switch (getRegisterAsideMenuUtilitie()) {
+        switch (getRegister("setClassActive")) {
             case "utilitie-1":
                 d.getElementById("utilitie-1").classList.add("active");
 
@@ -78,4 +79,20 @@ export function asideMenuLocalStorage() {
             });
         }
     }
+}
+
+// BtnDarkLight
+export function setRegisterBtnDarkLight(setClassDarkLightTranslate) {
+    localStorage.setItem("setClassDarkLightTranslate", JSON.stringify(setClassDarkLightTranslate));
+}
+
+export function btnDarkLightLocalStorage() {
+    if (localStorage.length > 0)
+        if (getRegister("setClassDarkLightTranslate") != null) {
+            const $slider = d.querySelectorAll(".slider");
+
+            $slider[0].classList.add("dark-light-translate");
+
+            $slider[1].classList.add("dark-light-translate");
+        }
 }

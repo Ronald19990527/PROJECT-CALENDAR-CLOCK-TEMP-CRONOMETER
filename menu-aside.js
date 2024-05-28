@@ -12,9 +12,7 @@ export default function menuAside(navMenuAside, showAndCloseMenu, chevronDoubleR
 
     responsiveForAsideMenu(responsive1, responsive2, responsive3, responsive4);
 
-    if (localStorageAvailable("localStorage")) {
-        asideMenuLocalStorage();
-    }
+    if (localStorageAvailable("localStorage")) asideMenuLocalStorage();
 
     d.addEventListener("click", e => {
         if (e.target.matches(`#${showAndCloseMenu}`) || e.target.matches(`#${chevronDoubleRightLeft}`)) {
@@ -22,6 +20,8 @@ export default function menuAside(navMenuAside, showAndCloseMenu, chevronDoubleR
                 $chevronDoubleRightLeft.classList.replace("bi-chevron-double-right", "bi-chevron-double-left");
 
                 $navMenuAside.classList.add("open-close-menu");
+
+                $navMenuAside.classList.remove("z-index-negative");
             }
             else if ($chevronDoubleRightLeft.classList.contains("bi-chevron-double-left")) closeMenu();
         }
@@ -53,6 +53,8 @@ export default function menuAside(navMenuAside, showAndCloseMenu, chevronDoubleR
         $chevronDoubleRightLeft.classList.replace("bi-chevron-double-left", "bi-chevron-double-right");
 
         $navMenuAside.classList.remove("open-close-menu");
+
+        $navMenuAside.classList.add("z-index-negative");
     }
 
     function responsiveForAsideMenu(responsive1, responsive2, responsive3, responsive4) {

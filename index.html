@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calendar | Clock | Temp | Cronometer</title>
+    <title>My APp</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&display=swap" rel="stylesheet">
@@ -12,38 +12,79 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header"></header>
     <main class="main">
-        <header class="header">
+        <div class="align-self-64rem d-flex-row-64rem header">
             <div class="items-header">
-                <div class="item-head">Utilities</div>
-                <div class="item-head">Dark-Light-Them</div>
-                <div class="item-head">Settings</div>
+                <div class="d-block-none item-head padding-top-bottom-1rem">My App</div>
+                <div class="arrow-utilities cursor-pointer d-none-block item-head padding-top-bottom-1rem">
+                    Utilities
+                    <i class="bi bi-chevron-double-down"></i>
+                </div>
+                <div class="d-none-block no-show-drop-down-utilities utilities-drop-down" style="display: none;">
+                    <ul>
+                        <li class="cursor-pointer">Timer</li>
+                        <li class="cursor-pointer">Chronometer</li>
+                        <li class="cursor-pointer">Clock</li>
+                        <li class="cursor-pointer">Calendar</li>
+                    </ul>
+                </div>
+                <div class="padding-top-bottom-1rem">
+                    <div class="d-none-block item-head switch">
+                        <span class="round slider"></span>
+                    </div>
+                </div>
+                <div class="align-self-end cursor-pointer item-head padding-top-bottom-1rem">
+                    <i class="bi bi-gear"></i>
+                </div>
             </div>
-        </header>
+            <div class="arrow-items-header d-block-none text-align-center">
+                <div class="chevron-down chevron-down-active-1 cursor-pointer padding-1rem">
+                    <i class="bi bi-chevron-double-down"></i>
+                </div>
+                <div class="utilities-dark-light-them-arrow">
+                    <div class="text-align-start">
+                        <div class="d-flex-center padding-1rem">
+                            <div class="item-head switch">
+                                <span class="round slider"></span>
+                            </div>
+                        </div>
+                        <div class="chevron-down-active-2 cursor-pointer padding-1rem">
+                            Utilities
+                            <i class="bi bi-chevron-double-down"></i>
+                        </div>
+                        <div class="utilities-arrow">
+                            <div class="padding-1rem">Timer</div>
+                            <div class="padding-1rem">Chronometer</div>
+                            <div class="padding-1rem">Clock</div>
+                            <div class="padding-1rem">Calendar</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <aside id="nav-menu-aside" class="nav-menu-aside">
             <nav class="menu">
                 <h1>My App</h1>
                 <ul>
-                    <li id="utilitie-1" class="active">
+                    <li id="utilitie-1" class="active cursor-pointer">
                         <i class="bi bi-clock-history icon"></i>
                         <small>Timer</small>
                     </li>
-                    <li id="utilitie-2">
+                    <li id="utilitie-2" class="cursor-pointer">
                         <i class="bi bi-stopwatch icon"></i>
                         <small>Chronometer</small>
                     </li>
-                    <li id="utilitie-3">
+                    <li id="utilitie-3" class="cursor-pointer">
                         <i class="bi bi-clock icon"></i>
                         <small>Clock</small>
                     </li>
-                    <li id="utilitie-4">
+                    <li id="utilitie-4" class="cursor-pointer">
                         <i class="bi bi-calendar-date icon"></i>
                         <small>Calendar</small>
                     </li>
                 </ul>
             </nav>
-            <div id="show-and-close-menu" class="show-and-close-menu">
+            <div id="show-and-close-menu" class="cursor-pointer show-and-close-menu">
                 <i id="chevron-double-right-left" class="bi bi-chevron-double-right"></i>
             </div>
         </aside>
