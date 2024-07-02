@@ -33,10 +33,8 @@ li {
 /* **********Componentes********** */
 /* Header */
 .header {
-    align-items: center;
     background-color: var(--green-color);
-    left: 0;
-    position: fixed;
+    position: sticky;
     top: 0;
     width: 100%;
 }
@@ -175,7 +173,17 @@ li {
     }
 }
 
-/* **********SwitchDarkLightTheme********** */
+/* Settings Options */
+.settings-options {
+    left: 100%;
+    padding: 2.2rem 2rem;
+    position: fixed;
+    top: 0;
+    transition: all, 0.3s ease-out;
+    width: 15rem;
+}
+
+/* SwitchDarkLightTheme */
 .switch {
     border-radius: 2.125rem;
     display: inline-block;
@@ -345,6 +353,11 @@ li {
     text-align: left;
 }
 
+/* Translate 15rem Negative */
+.translate-15rem-negative {
+    transform: translateX(-15rem);
+}
+
 /* Z Index Negative */
 .z-index-negative {
     z-index: -1;
@@ -357,8 +370,4 @@ li {
 
 .main {
     transition: all 0.3s ease-out;
-}
-
-.main.translate-15rem-negative {
-    transform: translateX(-15rem);
 }

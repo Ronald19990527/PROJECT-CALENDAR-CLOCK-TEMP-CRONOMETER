@@ -31,7 +31,7 @@ export default function showMenuChevronDown(chevronDownActive) {
                 $chevronDownActive.firstElementChild.classList.replace("bi-chevron-double-down", "bi-chevron-double-up");
             }
         }
-        else if (e.target.matches("html")) {
+        else if (e.target.matches("body")) {
             const $nextSibling = $chevronDownActive.nextElementSibling;
 
             $nextSibling.style.maxHeight = null;

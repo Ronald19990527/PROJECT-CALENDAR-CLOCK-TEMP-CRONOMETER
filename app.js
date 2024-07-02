@@ -12,5 +12,5 @@ d.addEventListener("DOMContentLoaded", e => {
     showMenuChevron2(".chevron-down-active-2");
     btnDarkLight(".slider");
     showUtilitiesDropDown(".arrow-utilities", ".utilities-drop-down");
-    settings("main");
+    settings("main", "settings-options");
 });
